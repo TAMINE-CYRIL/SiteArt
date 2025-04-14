@@ -3,17 +3,15 @@
 namespace controller;
 
 use core\Layout;
-use view\AvisView;
+use view\ContactView;
 
-class AvisController
+class ContactController
 {
-
-    public function display()
-    {
+    public function display(){
         $layout = new Layout("view/layout.html");
-        $viewHome = new AvisView($layout);
+        $viewHome = new ContactView($layout);
         $viewHome->display();
-
     }
+
 
 }

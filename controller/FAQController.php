@@ -3,14 +3,16 @@
 namespace controller;
 
 use core\Layout;
-use view\LoginView;
+use view\ContactView;
+use view\FAQView;
 
-class LoginController
+class FAQController
 {
-    public function display(): void
-    {
+    public function display(){
         $layout = new Layout("view/layout.html");
-        $viewHome = new LoginView($layout);
+        $viewHome = new FAQView($layout);
         $viewHome->display();
     }
+
+
 }
