@@ -13,7 +13,12 @@ class HomeView {
     public function display() {
         $content = '
             <h1>Bienvenue sur la page d\'accueil</h1>
-            <p>Ceci est la page principale du site.</p>
+            <p>Je suis Xano, un artiste français !</p>
+            
+            <h2>Vous pouvez me contacter et obtenir des informations supplémentaires sur mes commissions
+            grâce à ce site !</h2>
+            
+            <h2>La galerie</h2>
         ';
 
         $this->layout->render($content);
