@@ -14,6 +14,10 @@ if ($request_uri === '' || $request_uri === 'index.php') {
     $controller = new HomeController();
     $controller->display();
 }
+elseif ($request_uri === 'index.php/commissions') {
+    $controller = new CommissionController();
+    $controller->display();
+}
 elseif ($request_uri === 'index.php/faq') {
     $controller = new FAQController();
     $controller->display();

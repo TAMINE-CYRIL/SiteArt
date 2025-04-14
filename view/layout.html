@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/view/stylesheet/style.css">
   <title>Xano | Portfolio</title>
-
 </head>
 <body>
 
 <header>
   <nav>
     <ul>
-      <li class="active"><a href="/">Accueil</a></li>
-      <li><a href="/index.php/commissions">Commissions</a></li>
-      <li><a href="/index.php/faq">FAQ</a></li>
-      <li><a href="/index.php/contact">Contact</a></li>
-      <li><a href="/index.php/about">A propos</a> </li>
+      <?php
+      $currentPage = $this->getCurrentPage();
+      $menuItems = [
+      'home' => ['url' => '/', 'label' => 'Accueil'],
+      'commissions' => ['url' => '/index.php/commissions', 'label' => 'Commissions'],
+      'faq' => ['url' => '/index.php/faq', 'label' => 'FAQ'],
+      'contact' => ['url' => '/index.php/contact', 'label' => 'Contact'],
+      'about' => ['url' => '/index.php/about', 'label' => 'A propos']
+      ];
+
+      foreach ($menuItems as $page => $item) {
+      $activeClass = ($currentPage == $page) ? ' class="active"' : '';
+      echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
+      }
+      ?>
     </ul>
   </nav>
 </header>

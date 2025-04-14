@@ -9,6 +9,7 @@ class CommissionController
 {
     public function display(){
         $layout = new Layout("view/layout.html");
+        $layout->setCurrentPage('commissions');
         $viewHome = new CommissionView($layout);
         $viewHome->display();
     }

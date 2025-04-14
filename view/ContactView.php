@@ -20,6 +20,7 @@ class ContactView
               <input type="text" name="email" />
               <label for="message">Message</label>
               <textarea name="message"></textarea>
+              <input type="submit" />
               </form>
 
             ';
