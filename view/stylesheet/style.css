@@ -1,0 +1,7 @@
+header {
+    display: flex;
+    background: steelblue;
+    flex-direction: row;
+    text-decoration: none;
+
+}
