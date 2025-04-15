@@ -29,3 +29,7 @@ nav ul li.active {
 nav ul li.active a {
     color: white;
 }
+
+h1{
+    text-align: center;
+}
