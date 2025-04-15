@@ -18,9 +18,9 @@ class AboutView
               depuis 2019.</p>
               
               <h1>Mon matériel</h1>
-              <p>Ordinateur : </p>
-              <p>Tablette graphique : </p>
-
+              <p>Carte Graphique : <strong>NVIDIA GeForce RTX 3050</strong></p>
+              <p>Processeur : <strong>AMD Ryzen 7 5800H</strong></p>
+              <p>Tablette graphique : <strong>XP Pen Tablet 12 2nd Generation</strong></p>
             ';
 
 
