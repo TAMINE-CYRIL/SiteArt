@@ -16,15 +16,31 @@
       $menuItems = [
       'home' => ['url' => '/', 'label' => 'Accueil'],
       'commissions' => ['url' => '/index.php/commissions', 'label' => 'Commissions'],
+      'gallery' => ['url' => '/index.php/gallery', 'label' => 'Galerie'],
       'faq' => ['url' => '/index.php/faq', 'label' => 'FAQ'],
       'contact' => ['url' => '/index.php/contact', 'label' => 'Contact'],
-      'about' => ['url' => '/index.php/about', 'label' => 'A propos']
+      'about' => ['url' => '/index.php/about', 'label' => 'À propos'],
       ];
 
+      echo '<ul>';
       foreach ($menuItems as $page => $item) {
       $activeClass = ($currentPage == $page) ? ' class="active"' : '';
+
+      if ($page === 'gallery') {
+      echo "<li$activeClass>";
+      echo "<a href=\"{$item['url']}\">{$item['label']}</a>";
+      echo '<ul class="submenu">;
+        <li><a href="/index.php/gallery/2025">2025</a></li>;
+        <li><a href="/index.php/gallery/2024">2024</a></li>;
+        <li><a href="/index.php/gallery/2023">2023</a></li>;
+        <li><a href="/index.php/gallery/2022">2022</a></li>';
+        echo '</ul>';
+      echo '</li>';
+      } else {
       echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
       }
+      }
+      echo '</ul>';
       ?>
     </ul>
   </nav>
@@ -32,20 +48,20 @@
 
 <main>
   <?php echo $content; ?>
-  <script src="/view/js/index.js"></script>
 </main>
 
 <footer>
   <section class="reseaux">
-  <h4>Nous contacter</h4>
-    <h4>Réseaux </h4>
+    <h4>Nous contacter</h4>
+    <h4>Réseaux</h4>
+    <p>Twitter</p>
+    <p>Instagram</p>
+    <p>TikTok</p>
   </section>
-
-  <p>Twitter</p>
-  <p>Instagram</p>
-  <p>TikTok</p>
   <p>&copy; 2025 - Tous droits réservés</p>
 </footer>
+
+<script src="/view/js/index.js"></script>
 
 </body>
 </html>

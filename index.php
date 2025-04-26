@@ -3,6 +3,7 @@
 require __DIR__ . '/Autoloader.php';
 
 use controller\AboutController;
+use controller\GalleryController;
 use controller\HomeController;
 use controller\FAQController;
 use controller\ContactController;
@@ -16,6 +17,10 @@ if ($request_uri === '' || $request_uri === 'index.php') {
 }
 elseif ($request_uri === 'index.php/commissions') {
     $controller = new CommissionController();
+    $controller->display();
+}
+elseif ($request_uri === 'index.php/gallery'){
+    $controller = new GalleryController();
     $controller->display();
 }
 elseif ($request_uri === 'index.php/faq') {

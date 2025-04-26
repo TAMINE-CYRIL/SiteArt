@@ -21,7 +21,7 @@ class HomeView {
             grâce à ce site !</h2>
             <button>Me contacter</button>
             
-            <h2>La galerie</h2>
+            <h2>Mes dernières oeuvres</h2>
             <section class="galerie">
             <img src="./img/Chihiro.png" alt="Dessin de Chihiro, réalisé en 2025" />
             <img src="https://x.com/Xanowshcv05/status/1915902532171268250" alt="Dessin de James Lee, réalisé en 2025" />
