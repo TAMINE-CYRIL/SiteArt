@@ -9,7 +9,7 @@ class GalleryController
 {
     public function display(){
         $layout = new Layout("view/layout.html");
-        $layout->setCurrentPage('faq');
+        $layout->setCurrentPage('gallery');
         $viewHome = new GalleryView($layout);
         $viewHome->display();
     }

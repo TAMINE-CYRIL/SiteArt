@@ -13,7 +13,7 @@ class HomeView {
     public function display() {
         $content = '
             <h1>Bienvenue sur la page d\'accueil !</h1>
-            <p>Je suis Xano, illustrateur français sur la thématiques des mangas et des animés.
+            <p>Je suis Xano, illustrateur français spécialiste dans le style animé et semi-réaliste.
             Sur ce site, tu découvriras mes créations et tu pourras passer commande pour une illustration personnalisée, 
             selon tes envies.</p>
             
