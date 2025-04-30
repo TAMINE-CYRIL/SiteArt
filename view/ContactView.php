@@ -14,12 +14,12 @@ class ContactView
         $content = '
               <h1>Me contacter</h1>
               <form>
-              <label for="nom">Nom</label>
-              <input type="text" name="nom" />
-              <label for="email">Email</label>
-              <input type="text" name="email" />
-              <label for="message">Message</label>
-              <textarea name="message"></textarea>
+              <label for="nom">Nom*</label>
+              <input type="text" name="nom" placeholder="Nom..." required/>
+              <label for="email">Email*</label>
+              <input type="text" name="email" placeholder="Email..." required/>
+              <label for="message">Message*</label>
+              <textarea name="message" placeholder="Message..." required></textarea>
               <input type="submit" />
               </form>
 

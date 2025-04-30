@@ -182,3 +182,86 @@ footer p {
     background-color: #f9f9f9;
     overflow: hidden;
 }
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul li ul.submenu {
+        position: static;
+        box-shadow: none;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .reseaux {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        padding: 8px 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .reseaux {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1201px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        padding: 12px 25px;
+    }
+
+    form {
+        max-width: 700px;
+    }
+}
+
