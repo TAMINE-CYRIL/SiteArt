@@ -22,13 +22,18 @@ class HomeView {
             <button>Me contacter</button>
             
             <h2>Mes dernières oeuvres</h2>
-            <section class="galerie">
-            <img src="https://pbs.twimg.com/media/Goh23XpXQAAo9mP?format=jpg&name=large" alt="Dessin de Chihiro, réalisé en 2025" />
-            <img src="https://pbs.twimg.com/media/Gpam_FzXAAAl-3G?format=jpg&name=large" alt="Dessin de James Lee, réalisé en 2025" />
-            <img src="./img/Ghibli.png" alt="Autoportrait dans le style du studio Ghibli" />
-            <img src="./img/Gura.png" alt="Dessin de Gawr Gura, réalisé en 2025" />
-    
-</section>
+            <section class="swiper">
+                <section class="swipper-wrapper">
+                    <img class="swiper-slide" src="https://pbs.twimg.com/media/Goh23XpXQAAo9mP?format=jpg&name=large" alt="Dessin de Chihiro, réalisé en 2025" />
+                    <img class="swipper-slide" src="https://pbs.twimg.com/media/Gpam_FzXAAAl-3G?format=jpg&name=large" alt="Dessin de James Lee, réalisé en 2025" />
+                    <img class="swiper-slide" src="https://pbs.twimg.com/media/GnprRtMWEAA9L3L?format=jpg&name=4096x4096" alt="Autoportrait dans le style du studio Ghibli" />
+                    <img class="swiper-slide" src="https://pbs.twimg.com/media/Gp5EvU1XIAAMmhq?format=jpg&name=large" alt="Dessin de Gawr Gura, réalisé en 2025" />
+                </section>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> 
+                <div class="swiper-pagination"></div>
+            </section>
+
         ';
 
         $this->layout->render($content);
