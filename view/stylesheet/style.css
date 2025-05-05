@@ -163,7 +163,7 @@ footer p {
 
 .reseaux{
     display: flex;
-    justify-content: space-around;
+    width: 20px;
 }
 
 .accordion {
@@ -265,6 +265,10 @@ footer p {
     }
 }
 
-img{
-    width: 200px;
+.accueil{
+    background: #d5d5d5;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 12px;
 }
