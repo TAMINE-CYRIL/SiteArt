@@ -18,9 +18,6 @@ class HomeView {
                 <h2>Xano </h2>
                 <h2>Illustrateur français 🍞</h2>
             </section>
-            <h2>Vous pouvez me contacter et obtenir des informations supplémentaires sur mes commissions
-            grâce à ce site !</h2>
-            <a href="/contact"><button>Me contacter</button></a>
             
             <h2>Mes dernières oeuvres</h2>
             <div class="swiper-container">

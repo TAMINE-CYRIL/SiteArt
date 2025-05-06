@@ -52,18 +52,37 @@
   <?php echo $content; ?>
 </main>
 
-<footer>
-  <section class="reseaux">
-    <h4>Me contacter</h4>
 
-    <h4>Réseaux</h4>
-    <p>Twitter</p>
-    <img class="icone" src="/view/img/xtwitter.png" alt="Logo X, anciennement Twitter"/>
-    <p>TikTok</p>
-    <img class="icone" src="/view/img/tiktok.png" alt="Logo Tiktok"/>
-  </section>
-  <p>&copy; 2025 - Tous droits réservés</p>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section contact">
+      <h4>Me contacter</h4>
+      <a href="/contact" class="footer-btn">Formulaire de contact</a>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Réseaux sociaux</h4>
+      <div class="social-icons">
+        <a href="#" target="_blank" class="social-link">
+          <img class="social-icon" src="/view/img/xtwitter.png" alt="Twitter/X" />
+          <span>Twitter/X</span>
+        </a>
+        <a href="#" target="_blank" class="social-link">
+          <img class="social-icon" src="/view/img/tiktok.png" alt="TikTok" />
+          <span>TikTok</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Xano - Tous droits réservés</p>
+  </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/view/js/index.js"></script>
+<script src="/view/js/swiper-init.js"></script>
 
 <!-- Scripts JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
