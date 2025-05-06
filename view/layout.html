@@ -17,11 +17,11 @@
       $currentPage = $this->getCurrentPage();
       $menuItems = [
       'home' => ['url' => '/', 'label' => 'Accueil'],
-      'commissions' => ['url' => '/index.php/commissions', 'label' => 'Commissions'],
-      'gallery' => ['url' => '/index.php/gallery', 'label' => 'Galerie'],
-      'faq' => ['url' => '/index.php/faq', 'label' => 'FAQ'],
-      'contact' => ['url' => '/index.php/contact', 'label' => 'Contact'],
-      'about' => ['url' => '/index.php/about', 'label' => 'À propos'],
+      'commissions' => ['url' => '/commissions', 'label' => 'Commissions'],
+      'gallery' => ['url' => '/gallery', 'label' => 'Galerie'],
+      'faq' => ['url' => '/faq', 'label' => 'FAQ'],
+      'contact' => ['url' => '/contact', 'label' => 'Contact'],
+      'about' => ['url' => '/about', 'label' => 'À propos'],
       ];
 
       echo '<ul>';
@@ -31,12 +31,12 @@
       if ($page === 'gallery') {
       echo "<li$activeClass>";
       echo "<a href=\"{$item['url']}\">{$item['label']}</a>";
-      echo '<ul class="submenu">;
-        <li><a href="/index.php/gallery/2025">2025</a></li>;
-        <li><a href="/index.php/gallery/2024">2024</a></li>;
-        <li><a href="/index.php/gallery/2023">2023</a></li>;
-        <li><a href="/index.php/gallery/2022">2022</a></li>';
-        echo '</ul>';
+      echo '<ul class="submenu">
+        <li><a href="/gallery/2025">2025</a></li>
+        <li><a href="/gallery/2024">2024</a></li>
+        <li><a href="/gallery/2023">2023</a></li>
+        <li><a href="/gallery/2022">2022</a></li>
+      </ul>';
       echo '</li>';
       } else {
       echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
@@ -65,9 +65,10 @@
   <p>&copy; 2025 - Tous droits réservés</p>
 </footer>
 
-<script src="/view/js/index.js"></script>
+<!-- Scripts JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="/view/js/index.js"></script>
+<script src="/view/js/swiper-init.js"></script>
 
 </body>
 </html>

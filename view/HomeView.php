@@ -14,27 +14,43 @@ class HomeView {
         $content = '
             <h1>Bienvenue sur la page d\'accueil !</h1>
             <section class="accueil">
-            <img src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
-            <h2>Xano </h2>
-            <h2>Illustrateur français 🍞</h2>
+                <img src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
+                <h2>Xano </h2>
+                <h2>Illustrateur français 🍞</h2>
             </section>
             <h2>Vous pouvez me contacter et obtenir des informations supplémentaires sur mes commissions
             grâce à ce site !</h2>
-            <button>Me contacter</button>
+            <a href="/contact"><button>Me contacter</button></a>
             
             <h2>Mes dernières oeuvres</h2>
-            <section class="swiper mySwiper">
-                <section class="swiper-wrapper">
-                    <img class="swiper-slide" src="/view/img/Chihiro.png" alt="Dessin de Chihiro, réalisé en 2025" />
-                    <img class="swiper-slide" src="/view/img/James.png" alt="Dessin de James Lee, réalisé en 2025" />
-                    <img class="swiper-slide" src="/view/img/Azurill.png" alt="Dessin d\'Azurill, dans le cadre du projet Pokémon Gen X" />
-                    <img class="swiper-slide" src="/view/img/Sora.png" alt="Dessin de Tokino Sora, réalisé en 2025" />
-                </section>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> 
-                <div class="swiper-pagination"></div>
-            </section>
-
+            <div class="swiper-container">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/view/img/Chihiro.png" alt="Dessin de Chihiro, réalisé en 2025" />
+                            <div class="slide-caption">Chihiro (2025)</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/view/img/James.png" alt="Dessin de James Lee, réalisé en 2025" />
+                            <div class="slide-caption">James Lee (2025)</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/view/img/Azurill.png" alt="Dessin d\'Azurill, dans le cadre du projet Pokémon Gen X" />
+                            <div class="slide-caption">Azurill - Projet Pokémon Gen X</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/view/img/Sora.png" alt="Dessin de Tokino Sora, réalisé en 2025" />
+                            <div class="slide-caption">Tokino Sora (2025)</div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
         ';
 
         $this->layout->render($content);
