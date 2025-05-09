@@ -31,6 +31,8 @@ class FAQView {
             <p class="accordion">Puis-je utiliser ma commission comme un NFT ?</p>
             <p class="panel">Non.</p>
             
+            <section class="icandraw">
+            
             <h3>✅ Ce que je peux dessiner :</h3>
             <ul>
                 <li>Des êtres humains</li>
@@ -44,6 +46,8 @@ class FAQView {
                 <li>Des mecha</li>
                 <li>Des furry</li>
             </ul>
+           </section>
+
 
             
         ';
