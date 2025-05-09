@@ -13,6 +13,7 @@ class FAQView {
     public function display() {
         $content = '
             <h1>FAQ</h1>
+            <hr>
             <h3>Frequently Asked Questions</h3>
             <h5>Je réponds à vos questions les plus posées.</h5>
             

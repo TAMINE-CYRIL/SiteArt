@@ -13,8 +13,9 @@ class HomeView {
     public function display() {
         $content = '
             <h1>Bienvenue sur la page d\'accueil !</h1>
+            <hr>
             <section class="accueil">
-                <img src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
+                <img class="icone" src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
                 <h2>Xano </h2>
                 <h2>Illustrateur français 🍞</h2>
             </section>
@@ -41,11 +42,7 @@ class HomeView {
                             <div class="slide-caption">Tokino Sora (2025)</div>
                         </div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+
                 </div>
             </div>
         ';

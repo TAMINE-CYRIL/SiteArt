@@ -13,6 +13,7 @@ class GalleryView
     public function display(){
         $content =  '
          <h1>Galerie</h1>
+         <hr>
          <h3>Retrouvez ici l\'historique des mes dessins.</h3>
          <img src="#" alt="Dessins réalisés en 2025" />
          <img src="#" alt="Dessins réalisés en 2024" />

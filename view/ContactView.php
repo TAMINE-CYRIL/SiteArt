@@ -13,6 +13,7 @@ class ContactView
     public function display() {
         $content = '
               <h1>Me contacter</h1>
+              <hr>
               <form>
               <label for="nom">Nom*</label>
               <input type="text" name="nom" placeholder="Nom..." required/>

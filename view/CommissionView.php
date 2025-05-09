@@ -12,7 +12,7 @@ class CommissionView {
 
     public function display() {
         $content = '
-            <h1>Commissions</h1>
+            <h1 class="typewrite">Commissions</h1>
             <p>Retrouvez ici toutes les informations concernant les commissions que je prends.</p>
             <hr>
             
