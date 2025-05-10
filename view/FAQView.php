@@ -21,7 +21,7 @@ class FAQView {
             <p class="panel">Vous pouvez me payer par PayPal ou par carte de crédit.</p>
             
             <p class="accordion">Acceptes-tu les remboursements ?</p>
-            <p class="panel">Si je n\'ai pas encore commencé, ou si je n\'ai fait qu\'un sketch, c\'est possible, autrement
+            <p class="panel">Si je n\'ai pas encore commencé, ou si je n\'ai fait qu\'un croquis, c\'est possible, autrement
             je suis désolé mais un remboursement est impossible.</p>
             
             <p class="accordion">Combien de temps une commission prend-elle ?</p>
@@ -31,21 +31,23 @@ class FAQView {
             <p class="accordion">Puis-je utiliser ma commission comme un NFT ?</p>
             <p class="panel">Non.</p>
             
-            <section class="icandraw">
-            
-            <h3>✅ Ce que je peux dessiner :</h3>
-            <ul>
-                <li>Des êtres humains</li>
-                <li>Des Pokémons (simples)</li>
-            </ul>
-            
-           <h3>❌ Ce que je ne peux pas dessiner :</h3>
-           <ul>
-                <li>Du gore</li>
-                <li>Du NSFW</li>
-                <li>Des mecha</li>
-                <li>Des furry</li>
-            </ul>
+            <section class="icandraw">      
+                <section class="ican">
+                    <h3>✅ Ce que je peux dessiner :</h3>
+                    <ul>
+                        <li>Des êtres humains</li>
+                        <li>Des Pokémons (simples)</li>
+                    </ul>
+                </section>
+                <section class="icant">
+                   <h3>❌ Ce que je ne peux pas dessiner :</h3>
+                   <ul>
+                        <li>Du gore</li>
+                        <li>Du NSFW</li>
+                        <li>Des mecha</li>
+                        <li>Des furry</li>
+                    </ul>
+                </section>
            </section>
 
 

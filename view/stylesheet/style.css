@@ -508,6 +508,8 @@ hr {
 .icandraw{
     background: var(--gradient-gray);
     border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Responsive design */
