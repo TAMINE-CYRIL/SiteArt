@@ -3,22 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
+        loop: true,
 
         autoplay: {
             delay: 3000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
         },
 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
         speed: 600,
         keyboard: {
             enabled: true,
