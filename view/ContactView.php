@@ -10,11 +10,18 @@ class ContactView
         $this->layout = $layout;
     }
 
-    public function display() {
+    public function display($alerte = '', $status = '') {
+
+        $notification = '';
+        if (!empty($alerte)) {
+            $notificationClass = ($status === 'success') ? 'notification success' : 'notification error';
+            $notification = "<div class=\"$notificationClass\">$alerte</div>";
+        }
         $content = '
               <h1>Me contacter</h1>
               <hr>
-              <form>
+              '. $notification .'
+              <form method="POST" action="/contact">
               <label for="nom">Nom*</label>
               <input type="text" name="nom" placeholder="Nom..." required/>
               <label for="email">Email*</label>
