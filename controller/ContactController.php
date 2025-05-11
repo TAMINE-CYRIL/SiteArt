@@ -25,7 +25,9 @@ class ContactController
             else{
                 $to = "#";
                 $subject = "Formulaire de contact";
-                $message = "Nom: " . $nom . "<br>Email: " . $email . "<br>Message: " . $message;
+                $message = "Nom: " . $nom;
+                $message .= "Email: " . $email;
+                $message .= "Message: " . $message;
                 $headers = "From: $email\r\n";
 
                 $mail = mail($to, $subject, $message, $headers);
