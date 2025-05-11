@@ -47,7 +47,7 @@ class ContactController
         $layout = new Layout("view/layout.html");
         $layout->setCurrentPage('contact');
         $viewHome = new ContactView($layout);
-        $viewHome->display($alerte);
+        $viewHome->display($alerte, $status);
     }
 
 
