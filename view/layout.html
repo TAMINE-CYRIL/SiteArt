@@ -10,8 +10,7 @@
 </head>
 <body>
 
-<header>
-  <nav>
+<nav id="navigation">
     <ul>
       <?php
       $currentPage = $this->getCurrentPage();
@@ -45,8 +44,7 @@
       echo '</ul>';
       ?>
     </ul>
-  </nav>
-</header>
+</nav>
 
 <main>
   <?php echo $content; ?>

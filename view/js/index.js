@@ -24,3 +24,14 @@ function resetPseudo(i) {
         reseaux[i].innerHTML = (i === 0) ? "Twitter/X" : "TikTok";
     }
 }
+
+var prevScrollpos = window.scrollY;
+window.onscroll = function() {
+    var currentScrollPos = window.scrollY;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navigation").style.top = "0";
+    } else {
+        document.getElementById("navigation").style.top = "-50%";
+    }
+    prevScrollpos = currentScrollPos;
+}
