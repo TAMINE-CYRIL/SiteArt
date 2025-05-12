@@ -26,20 +26,8 @@
       echo '<ul>';
       foreach ($menuItems as $page => $item) {
       $activeClass = ($currentPage == $page) ? ' class="active"' : '';
-
-      if ($page === 'gallery') {
-      echo "<li$activeClass>";
-      echo "<a href=\"{$item['url']}\">{$item['label']}</a>";
-      echo '<ul class="submenu">
-        <li><a href="/gallery/2025">2025</a></li>
-        <li><a href="/gallery/2024">2024</a></li>
-        <li><a href="/gallery/2023">2023</a></li>
-        <li><a href="/gallery/2022">2022</a></li>
-      </ul>';
-      echo '</li>';
-      } else {
       echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
-      }
+
       }
       echo '</ul>';
       ?>

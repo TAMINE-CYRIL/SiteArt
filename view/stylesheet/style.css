@@ -360,9 +360,10 @@ form input[type="submit"]:active {
 
 
 .slide-caption {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color: rgba(145, 145, 145, 0.5);
+    color: black;
     padding: 10px;
+    width: 100%;
     text-align: center;
     font-weight: bold;
     border-radius: 10px;
@@ -515,57 +516,133 @@ hr {
 
 
 /* Galerie Masonry */
-#masonry-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 16px;
-    margin-top: 20px;
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 16px;
+    margin-top: 30px;
     padding: 0 10px;
 }
 
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+}
+
 .masonry-item {
-    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    break-inside: avoid;
+    position: relative;
 }
 
 .masonry-item:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .masonry-item img {
     width: 100%;
     display: block;
     height: auto;
-    border-bottom: 1px solid #eee;
+    margin: 0;
+    transition: all 0.3s ease;
+}
 
+.masonry-item:hover img {
+    filter: brightness(1.05);
 }
 
 .masonry-caption {
-    padding: 10px;
-    font-size: 0.9rem;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #fff;
     text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+    font-weight: 500;
 }
 
+/* Overlay effect quand on survole */
+.masonry-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 44px); /* Hauteur moins la caption */
+    background: linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
 
+.masonry-item:hover::after {
+    opacity: 1;
+}
+
+/* Classes pour les différentes tailles d'images */
+.masonry-item.small img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.masonry-item.medium img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.masonry-item.large img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.masonry-item.vertical img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Effets de zoom au survol pour plus d'interactivité */
+.masonry-item .zoom-container {
+    overflow: hidden;
+}
+
+.masonry-item:hover .zoom-container img {
+    transform: scale(1.03);
+}
+
+.masonry-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
 
 /* Responsive design */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     nav ul {
