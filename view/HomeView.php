@@ -18,7 +18,7 @@ class HomeView {
                 <img class="icone" src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
                 <section class="accueil-texte">
                     <h2>Xano </h2>
-                    <h2>Illustrateur français 🍞</h2>
+                    <h2>Illustrateur français</h2>
                 </section>
             </section>
             
