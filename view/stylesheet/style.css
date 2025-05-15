@@ -193,6 +193,10 @@ nav ul li ul.submenu li a:hover {
     transform: none;
 }
 
+.flag{
+    width: 50px;
+}
+
 /* Boutons */
 button, .footer-btn {
     background-color: var(--primary-color);
