@@ -11,29 +11,31 @@
 <body>
 
 <nav id="navigation">
-    <ul>
-      <?php
+  <ul>
+    <?php
       $currentPage = $this->getCurrentPage();
-      $menuItems = [
-      'home' => ['url' => '/', 'label' => 'Accueil'],
-      'commissions' => ['url' => '/commissions', 'label' => 'Commissions'],
-      'gallery' => ['url' => '/gallery', 'label' => 'Galerie'],
-      'faq' => ['url' => '/faq', 'label' => 'FAQ'],
-      'contact' => ['url' => '/contact', 'label' => 'Contact'],
-      'about' => ['url' => '/about', 'label' => 'À propos'],
-      ];
+    $menuItems = [
+    'home' => ['url' => '/', 'label' => 'Accueil'],
+    'commissions' => ['url' => '/commissions', 'label' => 'Commissions'],
+    'gallery' => ['url' => '/gallery', 'label' => 'Galerie'],
+    'faq' => ['url' => '/faq', 'label' => 'FAQ'],
+    'contact' => ['url' => '/contact', 'label' => 'Contact'],
+    'about' => ['url' => '/about', 'label' => 'À propos'],
+    ];
 
-      echo '<ul>';
-      foreach ($menuItems as $page => $item) {
-      $activeClass = ($currentPage == $page) ? ' class="active"' : '';
-      echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
+    echo '<ul>';
+    foreach ($menuItems as $page => $item) {
+    $activeClass = ($currentPage == $page) ? ' class="active"' : '';
+    echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
 
-      }
-      echo '</ul>';
-      ?>
-    </ul>
-  <a href="https://xanoart.alwaysdata.net/"><img class="flag" src="view/img/france.png" alt="Drapeau de la France, traduction française." /></a>
-  <a href="https://xanoart-alwaysdata-net.translate.goog/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=fr&_x_tr_pto=wapp"><img class="flag" src="view/img/uk.png" alt="Drapeau du Royaume-Uni, traduction anglaise." /></a>
+    }
+    echo '</ul>';
+    ?>
+  </ul>
+  <div class="language-options">
+    <a href="https://xanoart.alwaysdata.net"><img class="flag" src="view/img/france.png" alt="Drapeau de la France, traduction française." /></a>
+    <a href="https://xanoart-alwaysdata-net.translate.goog/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=fr&_x_tr_pto=wapp"><img class="flag" src="view/img/uk.png" alt="Drapeau du Royaume-Uni, traduction anglaise." /></a>
+  </div>
 </nav>
 
 <main>

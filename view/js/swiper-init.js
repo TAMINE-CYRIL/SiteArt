@@ -42,8 +42,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-
-    document.querySelectorAll('.swiper-slide').forEach(slide => {
-        addNewBadge(slide);
-    });
 });

@@ -16,6 +16,13 @@ class GalleryView
          <hr>
          <h3>Retrouvez ici l\'historique des mes dessins.</h3>
             <div class="masonry-gallery" id="masonry-gallery">
+                 <div class="masonry-item">
+                    <div class="zoom-container">
+                        <img src="/view/img/Gura.png" alt="Dessin de Gawr Gura, réalisé en 2025" />
+                    </div>
+                    <div class="masonry-caption">Gawr Gura, Hololive</div>
+                    <span class="masonry-badge">Nouveau</span>
+                </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
                         <img src="/view/img/Chihiro.png" alt="Dessin de Chihiro, réalisé en 2025" />
@@ -51,13 +58,6 @@ class GalleryView
                         <img src="/view/img/Togetic.png" alt="Dessin de Togetic, réalisé en 2025" />
                     </div>
                     <div class="masonry-caption">Togetic, Pokémon</div>
-                </div>
-                <div class="masonry-item">
-                    <div class="zoom-container">
-                        <img src="/view/img/Gura.png" alt="Dessin de Gawr Gura, réalisé en 2025" />
-                    </div>
-                    <div class="masonry-caption">Gawr Gura, Hololive</div>
-                    <span class="masonry-badge">Nouveau</span>
                 </div>
             </div>
         ';
