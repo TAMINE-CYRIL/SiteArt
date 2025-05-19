@@ -31,7 +31,14 @@ class Language
     }
 
     public function setLang($lang){
-
+        if (in_array($lang, $this->availableLang)) {
+            $this->currentlang = $lang;
+            $_SESSION['lang'] = $lang;
+            setcookie('lang', $lang, time() + (86400 * 30), "/");
+            $this->loadTranslations();
+            return true;
+        }
+        return false;
 
     }
 
@@ -49,5 +56,22 @@ class Language
         }
 
     }
+
+    public function get($key, $placeholders=[]){
+        $keys = explode('.', $key);
+        $value = $this->translations;
+
+        foreach ($keys as $key) {
+            if (isset($value[$key])) {
+                $value = $value[$key];
+            }
+            else {
+                return $key;
+            }
+        }
+
+        return $value;
+    }
+
 
 }
