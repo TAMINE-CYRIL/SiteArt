@@ -10,6 +10,7 @@ class Language
     private $availableLang = ['fr', 'en'];
 
     private function __construct(){
+        session_start();
         if (isset($_SESSION['lang']) && in_array($_SESSION['lang'], $this->availableLang)) {
             $this->currentlang = $_SESSION['lang'];
         }
@@ -24,7 +25,12 @@ class Language
 
     }
 
-
+    public static function getInstance() {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
 
     public function getCurrentLang(){
         return $this->currentlang;

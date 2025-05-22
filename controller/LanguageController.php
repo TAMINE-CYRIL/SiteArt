@@ -1,0 +1,26 @@
+<?php
+
+namespace controller;
+
+use core\Language;
+
+class LanguageController
+{
+    public function changeLanguage(): void{
+        if (isset($_GET['lang'])) {
+            $lang = $_GET['lang'];
+            $language = Language::getInstance();
+
+            if ($language->setLang($lang)) {
+                $referer =  $_SERVER['HTTP_REFERER'];
+                header("Location: $referer");
+                exit;
+
+            }
+        }
+        header("Location: /");
+        exit;
+
+    }
+
+}

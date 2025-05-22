@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo Language::getInstance()->getCurrentLang(); ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,7 @@
   <ul>
     <?php
       $currentPage = $this->getCurrentPage();
+      $language = Language::getInstance();
     $menuItems = [
     'home' => ['url' => '/', 'label' => 'Accueil'],
     'commissions' => ['url' => '/commissions', 'label' => 'Commissions'],
@@ -35,8 +36,8 @@
     ?>
   </ul>
   <div class="language-options">
-    <a href="https://xanoart.alwaysdata.net"><img class="flag" src="view/img/france.png" alt="Drapeau de la France, traduction française." /></a>
-    <a href="https://xanoart-alwaysdata-net.translate.goog/?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=fr&_x_tr_pto=wapp"><img class="flag" src="view/img/uk.png" alt="Drapeau du Royaume-Uni, traduction anglaise." /></a>
+    <a href="/lang?lang=fr"><img class="flag" src="view/img/france.png" alt="Français" /></a>
+    <a href="/lang?lang=en"><img class="flag" src="view/img/uk.png" alt="English" /></a>
   </div>
 </nav>
 

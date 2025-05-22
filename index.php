@@ -8,6 +8,10 @@ use controller\HomeController;
 use controller\FAQController;
 use controller\ContactController;
 use controller\CommissionController;
+use controller\LanguageController;
+use core\Language;
+
+$language = Language::getInstance();
 
 // Récupérer l'URL sans query string
 $request_uri = $_SERVER['REQUEST_URI'];

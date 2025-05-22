@@ -12,7 +12,7 @@ class HomeView {
 
     public function display() {
         $content = '
-            <h1>Bienvenue sur la page d\'accueil !</h1>
+            <h1>'. ('home.title') . '</h1>
             <hr>
             <section class="accueil">
                 <img class="icone" src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
