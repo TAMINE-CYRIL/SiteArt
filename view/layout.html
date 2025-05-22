@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="<?php echo Language::getInstance()->getCurrentLang(); ?>">
+<html lang="<?php echo \core\Language::getInstance()->getCurrentLang(); ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/view/stylesheet/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="icon" type="image/x-icon" href="view/img/favicon.ico">
-
-
-  <title>Xano | Portfolio</title>
+  <title><?php echo \core\Language::t('navigation.home'); ?> | Portfolio</title>
 </head>
 <body>
 
@@ -16,23 +14,22 @@
   <ul>
     <?php
       $currentPage = $this->getCurrentPage();
-      $language = Language::getInstance();
+      $language = \core\Language::getInstance();
+
     $menuItems = [
-    'home' => ['url' => '/', 'label' => 'Accueil'],
-    'commissions' => ['url' => '/commissions', 'label' => 'Commissions'],
-    'gallery' => ['url' => '/gallery', 'label' => 'Galerie'],
-    'faq' => ['url' => '/faq', 'label' => 'FAQ'],
-    'contact' => ['url' => '/contact', 'label' => 'Contact'],
-    'about' => ['url' => '/about', 'label' => 'À propos'],
+    'home' => ['url' => '/', 'label_key' => 'navigation.home'],
+    'commissions' => ['url' => '/commissions', 'label_key' => 'navigation.commissions'],
+    'gallery' => ['url' => '/gallery', 'label_key' => 'navigation.gallery'],
+    'faq' => ['url' => '/faq', 'label_key' => 'navigation.faq'],
+    'contact' => ['url' => '/contact', 'label_key' => 'navigation.contact'],
+    'about' => ['url' => '/about', 'label_key' => 'navigation.about'],
     ];
 
-    echo '<ul>';
     foreach ($menuItems as $page => $item) {
     $activeClass = ($currentPage == $page) ? ' class="active"' : '';
-    echo "<li$activeClass><a href=\"{$item['url']}\">{$item['label']}</a></li>";
-
+    $label = $language->get($item['label_key']);
+    echo "<li$activeClass><a href=\"{$item['url']}\">$label</a></li>";
     }
-    echo '</ul>';
     ?>
   </ul>
   <div class="language-options">
@@ -45,16 +42,15 @@
   <?php echo $content; ?>
 </main>
 
-
 <footer>
   <div class="footer-container">
     <div class="footer-section contact">
-      <h4>Me contacter</h4>
-      <a href="/contact" class="footer-btn">Formulaire de contact</a>
+      <h4><?php echo \core\Language::t('footer.contact_me'); ?></h4>
+      <a href="/contact" class="footer-btn"><?php echo \core\Language::t('footer.contact_form'); ?></a>
     </div>
 
     <div class="footer-section social">
-      <h4>Réseaux sociaux</h4>
+      <h4><?php echo \core\Language::t('footer.social_networks'); ?></h4>
       <div class="social-icons">
         <a href="https://x.com/Xanowshcv05" target="_blank" class="social-link" onmouseover="affichagePseudo(0)" onmouseout="resetPseudo(0)">
           <img class="social-icon" src="/view/img/xtwitter.png" alt="Twitter/X" />
@@ -69,14 +65,11 @@
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2025 Xano - Tous droits réservés</p>
+    <p><?php echo \core\Language::t('footer.copyright'); ?></p>
   </div>
 </footer>
 
-<!-- Script Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Script de nos fichiers -->
 <script src="/view/js/index.js"></script>
 <script src="/view/js/swiper-init.js"></script>
 

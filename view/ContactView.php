@@ -2,8 +2,9 @@
 
 namespace view;
 
-class ContactView
-{
+use core\Language;
+
+class ContactView {
     private $layout;
 
     public function __construct($layout) {
@@ -11,30 +12,29 @@ class ContactView
     }
 
     public function display($alerte = '', $status = '') {
+        $language = Language::getInstance();
 
         $notification = '';
         if (!empty($alerte)) {
             $notificationClass = ($status === 'success') ? 'notification success' : 'notification error';
             $notification = "<div class=\"$notificationClass\">$alerte</div>";
         }
+
         $content = '
-              <h1>Me contacter</h1>
-              <hr>
-              '. $notification .'
-              <form method="POST" action="/contact">
-              <label for="nom">Nom*</label>
-              <input type="text" name="nom" placeholder="Nom..." required/>
-              <label for="email">Email*</label>
-              <input type="text" name="email" placeholder="Email..." required/>
-              <label for="message">Message*</label>
-              <textarea name="message" placeholder="Message..." required></textarea>
-              <input type="submit" />
-              </form>
-
-            ';
-
+            <h1>'. $language->get('contact.title') .'</h1>
+            <hr>
+            '. $notification .'
+            <form method="POST" action="/contact">
+                <label for="nom">'. $language->get('contact.name') .'*</label>
+                <input type="text" name="nom" placeholder="'. $language->get('contact.name') .'..." required/>
+                <label for="email">'. $language->get('contact.email') .'*</label>
+                <input type="email" name="email" placeholder="'. $language->get('contact.email') .'..." required/>
+                <label for="message">'. $language->get('contact.message') .'*</label>
+                <textarea name="message" placeholder="'. $language->get('contact.message') .'..." required></textarea>
+                <input type="submit" value="'. $language->get('contact.submit') .'" />
+            </form>
+        ';
 
         $this->layout->render($content);
     }
-
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace controller;
 
 use core\Language;
@@ -12,15 +11,18 @@ class LanguageController
             $language = Language::getInstance();
 
             if ($language->setLang($lang)) {
-                $referer =  $_SERVER['HTTP_REFERER'];
+                // Rediriger vers la page précédente ou l'accueil
+                $referer = $_SERVER['HTTP_REFERER'] ?? '/';
+
+                // Nettoyer l'URL de référence pour éviter les boucles
+                $referer = preg_replace('/[?&]lang=[^&]*/', '', $referer);
+
                 header("Location: $referer");
                 exit;
-
             }
         }
         header("Location: /");
         exit;
 
     }
-
 }

@@ -1,5 +1,5 @@
 <?php
-
+// core/Language.php - Version corrigée
 namespace core;
 
 class Language
@@ -10,19 +10,21 @@ class Language
     private $availableLang = ['fr', 'en'];
 
     private function __construct(){
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
         if (isset($_SESSION['lang']) && in_array($_SESSION['lang'], $this->availableLang)) {
             $this->currentlang = $_SESSION['lang'];
         }
-        else{
-            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+        else {
+            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'fr', 0, 2);
             if (in_array($lang, $this->availableLang)) {
                 $this->currentlang = $lang;
             }
-
         }
-        $this->loadTranslations();
 
+        $this->loadTranslations();
     }
 
     public static function getInstance() {
@@ -45,7 +47,6 @@ class Language
             return true;
         }
         return false;
-
     }
 
     public function getAvailableLang(){
@@ -53,31 +54,44 @@ class Language
     }
 
     private function loadTranslations(){
-        $langFile = __DIR__ . '/../lang/' . $this->currentlang . '.php';
+        $langFile = __DIR__ . '/lang/' . $this->currentlang . '.php';
         if (file_exists($langFile)) {
             $this->translations = include $langFile;
         }
         else{
-            $this->translations = [];
+            // Fallback vers français si le fichier n'existe pas
+            $fallbackFile = __DIR__ . '/lang/fr.php';
+            if (file_exists($fallbackFile)) {
+                $this->translations = include $fallbackFile;
+            } else {
+                $this->translations = [];
+            }
         }
-
     }
 
-    public function get($key, $placeholders=[]){
+    public function get($key, $placeholders = []){
         $keys = explode('.', $key);
         $value = $this->translations;
 
-        foreach ($keys as $key) {
-            if (isset($value[$key])) {
-                $value = $value[$key];
+        foreach ($keys as $keyPart) {
+            if (isset($value[$keyPart])) {
+                $value = $value[$keyPart];
             }
             else {
-                return $key;
+                return "[$key]";
+            }
+        }
+
+        if (!empty($placeholders) && is_string($value)) {
+            foreach ($placeholders as $placeholder => $replacement) {
+                $value = str_replace($placeholder, $replacement, $value);
             }
         }
 
         return $value;
     }
 
-
+    public static function t($key, $placeholders = []) {
+        return self::getInstance()->get($key, $placeholders);
+    }
 }

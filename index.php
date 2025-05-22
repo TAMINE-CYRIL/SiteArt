@@ -55,6 +55,10 @@ elseif ($request_uri === 'contact') {
     $controller = new ContactController();
     $controller->display();
 }
+elseif ($request_uri === 'lang') {
+    $controller = new LanguageController();
+    $controller->changeLanguage();
+}
 else {
     header("HTTP/1.0 404 Not Found");
     die("Erreur 404 : Page non trouvée.");
