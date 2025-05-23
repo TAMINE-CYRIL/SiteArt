@@ -4,10 +4,12 @@ namespace controller;
 
 use core\Layout;
 use view\ContactView;
+use core\Language;
 
 class ContactController
 {
     public function display(){
+        $language = Language::getInstance();
 
         $alerte = " ";
         $status = " ";
@@ -19,7 +21,7 @@ class ContactController
             $message = $_POST["message"] ?? " ";
 
             if (empty($nom) || empty($email) || empty($message)) {
-                $alerte = "Veuillez remplir tous les champs.";
+                $alerte = $language->get('contact.required_fields');
                 $status = "error";
             }
             else{
@@ -34,11 +36,11 @@ class ContactController
 
                 if ($mail) {
                     $status = "success";
-                    $alerte = "Votre message a été envoyé avec succès.";
+                    $alerte = $language->get('contact.success');
                 }
                 else{
                     $status = "error";
-                    $alerte = "Une erreur est survenue lors de l'envoi du message.";
+                    $alerte = $language->get('contact.error');
                 }
 
             }

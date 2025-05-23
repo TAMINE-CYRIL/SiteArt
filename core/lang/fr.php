@@ -17,6 +17,9 @@ return [
         'title' => 'Qui suis-je ?',
         'description' => 'Passionné d\'art et d\'informatique depuis toujours, ce site est l\'occasion pour moi de mettre en avant mes deux passions. Je suis Xano, je dessine sur papier depuis 2014, et sur tablette depuis 2019.',
         'material_title' => 'Mon matériel',
+        'graphic_card' => 'Carte graphique',
+        'processor' => 'Processeur',
+        'graphic_tablet' => 'Tablette graphique',
         'contact_title' => 'Me contacter',
         'contact_description' => 'Vous pouvez bien sûr me contacter à l\'aide du formulaire présent sur le site, mais également sur mes réseaux : Twitter, TikTok, ou encore Discord.'
     ],
@@ -31,13 +34,9 @@ return [
         'required_fields' => 'Veuillez remplir tous les champs.'
     ],
     'commissions' => [
-        'title' => 'Commissions',
         'description' => 'Retrouvez ici toutes les informations concernant les commissions que je prends.',
-        'headshot' => 'Headshot',
         'headshot_desc' => 'Je dessine la tête de votre personnage.',
-        'bust_up' => 'Bust up',
         'bust_up_desc' => 'Je dessine votre personnage jusqu\'au buste.',
-        'chibi' => 'Chibi',
         'chibi_desc' => 'Je dessine votre personnage avec un style chibi.',
         'price_note' => 'Le prix peut augmenter selon les détails du personnage !'
     ],
@@ -47,8 +46,6 @@ return [
         'new_badge' => 'Nouveau'
     ],
     'faq' => [
-        'title' => 'FAQ',
-        'subtitle' => 'Frequently Asked Questions',
         'description' => 'Je réponds à vos questions les plus posées.',
         'payment_question' => 'Comment je paye la commission ?',
         'payment_answer' => 'Vous pouvez me payer par PayPal ou par carte de crédit.',
@@ -58,8 +55,9 @@ return [
         'time_answer' => 'La commission prendra autant de temps que nécessaire, cependant je vous enverrai fréquemment des nouvelles de votre commission !',
         'nft_question' => 'Puis-je utiliser ma commission comme un NFT ?',
         'nft_answer' => 'Non.',
-        'can_draw' => 'Ce que je peux dessiner :',
-        'cannot_draw' => 'Ce que je ne peux pas dessiner :'
+        'can_draw' => '✅ Ce que je peux dessiner :',
+        'cannot_draw' => '❌ Ce que je ne peux pas dessiner :',
+        'can_draw_humain'=>'Des êtres humains',
     ],
     'footer' => [
         'contact_me' => 'Me contacter',

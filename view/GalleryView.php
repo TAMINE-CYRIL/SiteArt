@@ -1,6 +1,7 @@
 <?php
 
 namespace view;
+use core\Language;
 
 class GalleryView
 {
@@ -11,51 +12,52 @@ class GalleryView
     }
 
     public function display(){
+        $language = Language::getInstance();
         $content =  '
-         <h1>Galerie</h1>
+         <h1>'. $language->get('gallery.title') .'</h1>
          <hr>
-         <h3>Retrouvez ici l\'historique des mes dessins.</h3>
+         <h3>'. $language->get('gallery.description') .'</h3>
             <div class="masonry-gallery" id="masonry-gallery">
                  <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Gura.png" alt="Dessin de Gawr Gura, réalisé en 2025" />
+                        <img src="/view/img/Gura.png" alt="Gawr Gura" />
                     </div>
                     <div class="masonry-caption">Gawr Gura, Hololive</div>
-                    <span class="masonry-badge">Nouveau</span>
+                    <span class="masonry-badge">'. $language->get('gallery.new_badge') .'</span>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Chihiro.png" alt="Dessin de Chihiro, réalisé en 2025" />
+                        <img src="/view/img/Chihiro.png" alt="Chihiro" />
                     </div>
-                    <div class="masonry-caption">Chihiro, Le voyage de Chihiro</div>
+                    <div class="masonry-caption">Chihiro</div>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/James.png" alt="Dessin de James Lee, réalisé en 2025" />
+                        <img src="/view/img/James.png" alt="James Lee" />
                     </div>
                     <div class="masonry-caption">James Lee, Lookism</div>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Azurill.png" alt="Dessin d\'Azurill, dans le cadre du projet Pokémon Gen X" />
+                        <img src="/view/img/Azurill.png" alt="Azurill" />
                     </div>
-                    <div class="masonry-caption">Azurill, Projet Pokémon Gen X</div>
+                    <div class="masonry-caption">Azurill, Pokémon Gen X</div>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Sora.png" alt="Dessin de Tokino Sora, réalisé en 2025" />
+                        <img src="/view/img/Sora.png" alt="Tokino Sora" />
                     </div>
                     <div class="masonry-caption">Tokino Sora, Hololive</div>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Mio.png" alt="Dessin de Ookami Mio, réalisé en 2025" />
+                        <img src="/view/img/Mio.png" alt="Ookami Mio" />
                     </div>
                     <div class="masonry-caption">Ookami Mio, Hololive</div>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Togetic.png" alt="Dessin de Togetic, réalisé en 2025" />
+                        <img src="/view/img/Togetic.png" alt="Togetic" />
                     </div>
                     <div class="masonry-caption">Togetic, Pokémon</div>
                 </div>

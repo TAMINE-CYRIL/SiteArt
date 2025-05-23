@@ -1,7 +1,7 @@
 <?php
 
 namespace view;
-
+use core\Language;
 
 class CommissionView {
     private $layout;
@@ -11,24 +11,26 @@ class CommissionView {
     }
 
     public function display() {
+        $language = Language::getInstance();
+
         $content = '
-            <h1 class="typewrite">Commissions</h1>
-            <p>Retrouvez ici toutes les informations concernant les commissions que je prends.</p>
+            <h1 class="typewrite"> Commissions </h1>
+            <p>'. $language->get('commissions.description') .'</p>
             <hr>
             
             <h2>Headshot</h2>
-            <p>Je dessine la tête de votre personnage.</p>
+            <p>'. $language->get('commissions.headshot_desc') .'</p>
             <hr>
             
             <h2>Bust up</h2>
-            <p>Je dessine votre personnage jusqu\'au buste.</p>
+            <p>'. $language->get('commissions.bust_up_desc') .'</p>
             <hr>
             
             <h2>Chibi</h2>
-            <p>Je dessine votre personnage avec un style chibi.</p>
+            <p>'. $language->get('commissions.chibi_desc') .'</p>
             <hr>
             
-            <strong>Le prix peut augmenter selon les détails du personnage !</strong>
+            <strong>'. $language->get('commissions.price_note') .'</strong>
         ';
 
         $this->layout->render($content);
