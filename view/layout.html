@@ -11,32 +11,44 @@
 <body>
 
 <nav id="navigation">
-  <ul>
-    <?php
-      $currentPage = $this->getCurrentPage();
+  <div class="nav-container">
+
+    <ul id="nav-menu">
+      <?php
+        $currentPage = $this->getCurrentPage();
       $language = \core\Language::getInstance();
 
-    $menuItems = [
-    'home' => ['url' => '/', 'label_key' => 'navigation.home'],
-    'commissions' => ['url' => '/commissions', 'label_key' => 'navigation.commissions'],
-    'gallery' => ['url' => '/gallery', 'label_key' => 'navigation.gallery'],
-    'faq' => ['url' => '/faq', 'label_key' => 'navigation.faq'],
-    'contact' => ['url' => '/contact', 'label_key' => 'navigation.contact'],
-    'about' => ['url' => '/about', 'label_key' => 'navigation.about'],
-    ];
+      $menuItems = [
+      'home' => ['url' => '/', 'label_key' => 'navigation.home'],
+      'commissions' => ['url' => '/commissions', 'label_key' => 'navigation.commissions'],
+      'gallery' => ['url' => '/gallery', 'label_key' => 'navigation.gallery'],
+      'faq' => ['url' => '/faq', 'label_key' => 'navigation.faq'],
+      'contact' => ['url' => '/contact', 'label_key' => 'navigation.contact'],
+      'about' => ['url' => '/about', 'label_key' => 'navigation.about'],
+      ];
 
-    foreach ($menuItems as $page => $item) {
-    $activeClass = ($currentPage == $page) ? ' class="active"' : '';
-    $label = $language->get($item['label_key']);
-    echo "<li$activeClass><a href=\"{$item['url']}\">$label</a></li>";
-    }
-    ?>
-  </ul>
-  <div class="language-options">
-    <a href="/lang?lang=fr"><img class="flag" src="view/img/france.png" alt="Français" /></a>
-    <a href="/lang?lang=en"><img class="flag" src="view/img/uk.png" alt="English" /></a>
+      foreach ($menuItems as $page => $item) {
+      $activeClass = ($currentPage == $page) ? ' class="active"' : '';
+      $label = $language->get($item['label_key']);
+      echo "<li$activeClass><a href=\"{$item['url']}\">$label</a></li>";
+      }
+      ?>
+
+      <div class="language-options">
+        <a href="/lang?lang=fr"><img class="flag" src="view/img/france.png" alt="Français" /></a>
+        <a href="/lang?lang=en"><img class="flag" src="view/img/uk.png" alt="English" /></a>
+      </div>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </nav>
+
+<div class="nav-overlay" id="nav-overlay"></div>
 
 <main>
   <?php echo $content; ?>
@@ -72,6 +84,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="/view/js/index.js"></script>
 <script src="/view/js/swiper-init.js"></script>
+<script src="/view/js/mobile-menu.js"></script>
 
 </body>
 </html>

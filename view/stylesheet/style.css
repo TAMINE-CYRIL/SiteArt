@@ -90,7 +90,6 @@ nav {
     padding: 10px 0;
     background-color: var(--bg-light);
     box-shadow: var(--shadow);
-    position: fixed;
     width: 100%;
     z-index: 1000;
     backdrop-filter: blur(5px);
@@ -148,6 +147,68 @@ nav ul li.active a {
 nav ul li.active a::after {
     width: 100%;
     background-color: var(--primary-dark);
+}
+
+/* Mobile menu style */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--primary-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Navigation mobile */
+@media screen and (max-width: 768px) {
+    #nav-menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background-color: var(--bg-light);
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1001;
+    }
+
+    #nav-menu.active {
+        right: 0;
+        width:100%
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .language-options {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
 }
 
 
