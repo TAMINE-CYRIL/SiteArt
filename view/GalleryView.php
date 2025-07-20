@@ -23,7 +23,6 @@ class GalleryView
                         <img src="/view/img/Gura.png" alt="Gawr Gura" />
                     </div>
                     <div class="masonry-caption">Gawr Gura, Hololive</div>
-                    <span class="masonry-badge">'. $language->get('gallery.new_badge') .'</span>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">

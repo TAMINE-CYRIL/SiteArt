@@ -25,7 +25,7 @@ class ContactController
                 $status = "error";
             }
             else{
-                $to = "#";
+                $to = "xanotite@gmail.com";
                 $subject = "Formulaire de contact";
                 $message = "Nom: " . $nom;
                 $message .= "Email: " . $email;
