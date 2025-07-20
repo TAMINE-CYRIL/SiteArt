@@ -9,6 +9,7 @@ return [
         'about' => 'About'
     ],
     'home' => [
+        'presentation' => 'Hi, I\'m',
         'title' => 'Welcome to the homepage!',
         'subtitle' => 'French Illustrator',
         'latest_works' => 'My latest works'

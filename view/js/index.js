@@ -1,7 +1,6 @@
 const accordions = document.querySelectorAll('.accordion');
 const reseaux = document.getElementsByClassName('reseau');
 
-
 accordions.forEach(button => {
     button.addEventListener('click', () => {
         const panel = button.nextElementSibling;
@@ -35,3 +34,4 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 }
+

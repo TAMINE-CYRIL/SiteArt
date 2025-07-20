@@ -9,6 +9,7 @@ return [
         'about' => 'À propos'
     ],
     'home' => [
+        'presentation' => 'Salut, je suis ',
         'title' => 'Bienvenue sur la page d\'accueil !',
         'subtitle' => 'Illustrateur français',
         'latest_works' => 'Mes dernières oeuvres'

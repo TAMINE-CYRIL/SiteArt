@@ -20,8 +20,8 @@ class HomeView {
             <section class="accueil">
                 <img class="icone" src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
                 <section class="accueil-texte">
-                    <h2>Xano </h2>
-                    <h2>'. $language->get('home.subtitle') .'</h2>
+                    <h2>'. $language->get('home.presentation') .' Xano <div class="emoji">👋</div></h2>
+                    <h2>'. $language->get('home.subtitle') .' 🎨🖌️</h2>
                 </section>
             </section>
             

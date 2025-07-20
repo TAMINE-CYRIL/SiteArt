@@ -97,6 +97,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 nav ul {
@@ -206,9 +207,6 @@ nav ul li.active a::after {
         margin-top: 20px;
     }
 
-    .nav-overlay.active {
-        display: block;
-    }
 }
 
 
@@ -221,6 +219,24 @@ nav ul li.active a::after {
     opacity: 70%;
     transition: 0.3s ease;
 }
+
+.emoji {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+    transform-origin: 70% 70%; /* point de rotation du "poignet" */
+}
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(14deg); }
+    20%  { transform: rotate(-8deg); }
+    30%  { transform: rotate(14deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(10deg); }
+    60%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
 
 /* Boutons */
 button, .footer-btn {
@@ -321,7 +337,7 @@ form input[type="submit"]:active {
     background-color: #8c8c8c;
 }
 
-.active, .accordion:focus {
+N.accordion:focus {
     background-color: #ccc;
 }
 
