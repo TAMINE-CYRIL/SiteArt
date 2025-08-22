@@ -28,6 +28,30 @@ class AboutView {
             <h1>'. $language->get('about.contact_title') .'</h1>
             <hr>
             <p>'. $language->get('about.contact_description') .'</p>
+            <h1>More about me !</h1>
+            <p class="accordion">Anime</p>
+            <ul class="panel">
+                <p>Gurren Lagann</p>
+                <p>Naruto</p>
+                <p>Code Geass</p>
+            </ul>
+            <p class="accordion">Games</p>
+            <ul class="panel">
+            <p>Tales of Berseria</p>
+            <p>Minecraft</p>
+            <p>Apex Legends</p>
+            <p>Paladins</p>
+            </ul>
+            
+            <p class="accordion">What I like</p>
+            <ul class="panel">
+                <p>Drawing</p>
+                <p>Coding</p>
+                <p>Sports</p>
+                <p>Reading</p>
+                <p>Eating</p>
+            </ul>
+           
         ';
 
         $this->layout->render($content);
