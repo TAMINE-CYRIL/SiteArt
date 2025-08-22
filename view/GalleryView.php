@@ -17,13 +17,22 @@ class GalleryView
          <h1>'. $language->get('gallery.title') .'</h1>
          <hr>
          <h3>'. $language->get('gallery.description') .'</h3>
+         
             <div class="masonry-gallery" id="masonry-gallery">
                  <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Gura.png" alt="Gawr Gura" />
+                        <img src="/view/img/Yor.png" alt="Yor" />
                     </div>
-                    <div class="masonry-caption">Gawr Gura, Hololive</div>
+                    <div class="masonry-caption">Yor, SPYxFAMILY</div>
                 </div>
+  
+                <div class="masonry-item">
+                    <div class="zoom-container">
+                        <img src="/view/img/James.png" alt="James Lee" />
+                    </div>
+                    <div class="masonry-caption">James Lee, Lookism</div>
+                </div>
+
                 <div class="masonry-item">
                     <div class="zoom-container">
                         <img src="/view/img/Chihiro.png" alt="Chihiro" />
@@ -32,22 +41,17 @@ class GalleryView
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/James.png" alt="James Lee" />
+                        <img src="/view/img/Frieren.png" alt="Frieren" />
                     </div>
-                    <div class="masonry-caption">James Lee, Lookism</div>
+                    <div class="masonry-caption">Frieren, Frieren: Beyond Journey\'s End</div>
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Azurill.png" alt="Azurill" />
+                        <img src="/view/img/Togetic.png" alt="Togetic" />
                     </div>
-                    <div class="masonry-caption">Azurill, Pokémon Gen X</div>
-                </div>
-                <div class="masonry-item">
-                    <div class="zoom-container">
-                        <img src="/view/img/Sora.png" alt="Tokino Sora" />
-                    </div>
-                    <div class="masonry-caption">Tokino Sora, Hololive</div>
-                </div>
+                    <div class="masonry-caption">Togetic, Pokémon</div>
+                </div>   
+ 
                 <div class="masonry-item">
                     <div class="zoom-container">
                         <img src="/view/img/Mio.png" alt="Ookami Mio" />
@@ -56,10 +60,26 @@ class GalleryView
                 </div>
                 <div class="masonry-item">
                     <div class="zoom-container">
-                        <img src="/view/img/Togetic.png" alt="Togetic" />
+                        <img src="/view/img/Gura.png" alt="Gawr Gura" />
                     </div>
-                    <div class="masonry-caption">Togetic, Pokémon</div>
+                    <div class="masonry-caption">Gawr Gura, Hololive</div>
                 </div>
+                <div class="masonry-item">
+                    <div class="zoom-container">
+                        <img src="/view/img/Azurill.png" alt="Azurill" />
+                    </div>
+                    <div class="masonry-caption">Azurill, Pokémon Gen X</div>
+                </div>
+
+                <div class="masonry-item">
+                    <div class="zoom-container">
+                        <img src="/view/img/Sora.png" alt="Tokino Sora" />
+                    </div>
+                    <div class="masonry-caption">Tokino Sora, Hololive</div>
+                </div>
+
+
+
             </div>
         ';
 

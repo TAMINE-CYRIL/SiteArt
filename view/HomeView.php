@@ -18,7 +18,7 @@ class HomeView {
             <h1>'. $language->get('home.title') . '</h1>
             <hr>
             <section class="accueil">
-                <img class="icone" src="/view/img/GojoIcone.png" alt="Icone de Satoru Gojo" />
+                <img class="icone" src="/view/img/YorIcone.png" alt="Icone de la page, représentant Yor" />
                 <section class="accueil-texte">
                     <h2>'. $language->get('home.presentation') .' Xano <div class="emoji">👋</div></h2>
                     <h2>'. $language->get('home.subtitle') .' 🎨🖌️</h2>

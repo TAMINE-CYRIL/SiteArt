@@ -11,10 +11,8 @@ class LanguageController
             $language = Language::getInstance();
 
             if ($language->setLang($lang)) {
-                // Rediriger vers la page précédente ou l'accueil
                 $referer = $_SERVER['HTTP_REFERER'] ?? '/';
 
-                // Nettoyer l'URL de référence pour éviter les boucles
                 $referer = preg_replace('/[?&]lang=[^&]*/', '', $referer);
 
                 header("Location: $referer");
